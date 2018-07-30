@@ -1,0 +1,36 @@
+{
+  "name": "koa-exemple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon entry.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corvofdeath/koa-exemple.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/corvofdeath/koa-exemple/issues"
+  },
+  "homepage": "https://github.com/corvofdeath/koa-exemple#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "esm": "^3.0.61",
+    "jsonwebtoken": "^8.3.0",
+    "koa": "^2.5.1",
+    "koa-body": "^4.0.4",
+    "koa-compose": "^4.1.0",
+    "koa-passport": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.2.2",
+    "passport-custom": "^1.0.5",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  }
+}
