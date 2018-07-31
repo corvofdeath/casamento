@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section id="top" v-bind:style="{ opacity: fadeOut }">
+        <section v-bind:style="{ opacity: fadeOut }">
             <Head></Head>
         </section>
         <section id="other"></section>
