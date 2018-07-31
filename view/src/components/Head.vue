@@ -3,10 +3,11 @@
         <b-row>
             <b-col md="12">
                 <div id="content">
-                    <h1>Dream Tuscany</h1>
-                    <h3>The Only Tuscany Travel Guide</h3>
+                    <h1>Casamento</h1>
+                    <h3>Filipe & Liliane</h3>
                     <hr>
-                    <b-button href="#other" variant="light">Let’s Go</b-button>
+                    <round-button href="#other" img="heart"></round-button>
+                    <!--<b-button href="#other" variant="outline-light" v-smooth-scroll="{ duration: 1500, offset: 0 }">Ver Lista</b-button>-->
                 </div>
                 <ul class="slideshow">
                     <li></li>
@@ -21,8 +22,14 @@
 </template>
 
 <script>
+import RoundButton from "@/components/RoundButton.vue";
+
 export default {
-    name: "app-head"
+    name: "app-head",
+    
+    components: {
+        RoundButton
+    }
 };
 </script>
 
@@ -33,10 +40,16 @@ export default {
     position: relative;
     text-align: center;
     padding-top: 40vh;
+    color: white;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem !important;
+    }
 }
 
 h1 {
-    font-weight: 700;
     font-size: 5em;
     text-shadow: 0 1px 0 #ccc,
                  0 2px 0 #c9c9c9,
@@ -91,26 +104,26 @@ hr {
 }
   
 .slideshow li:nth-child(1) {
-    background-image: url(https://images.unsplash.com/photo-1505868954261-144157311e7e?auto=format&fit=crop&w=1500&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    background-image: url(https://dg.imgix.net/the-surpassing-goal-marriage-lived-for-the-glory-of-god-hddop4xr-en/landscape/the-surpassing-goal-marriage-lived-for-the-glory-of-god-hddop4xr.jpg?ts=1498767585&ixlib=rails-2.1.4&w=580&h=327&dpr=2&ch=Width%2CDPR&auto=format%2Ccompress&fit=min);
 }
   
 .slideshow li:nth-child(2) {
-    background-image: url(https://images.unsplash.com/photo-1444214058525-761aeb793113?auto=format&fit=crop&w=1778&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    background-image: url(https://timedotcom.files.wordpress.com/2017/09/marriage-harder-than-ever-maybe-better.jpg);
     animation-delay: 7s;
 }
   
 .slideshow li:nth-child(3) {
-    background-image: url(https://images.unsplash.com/photo-1434025697302-54853b8da166?auto=format&fit=crop&w=1500&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    background-image: url(https://www.findnicknames.com/wp-content/uploads/2017/11/nicknames-for-couples.jpg);
     animation-delay: 14s;
 }
   
 .slideshow li:nth-child(4) {
-    background-image: url(https://images.unsplash.com/photo-1462015983553-d102a6c9a7ce?auto=format&fit=crop&w=1500&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    background-image: url(https://jooinn.com/images/couple-54.jpg);
     animation-delay: 21s;
 }
   
 .slideshow li:nth-child(5) {
-    background-image: url(https://images.unsplash.com/photo-1476362174823-3a23f4aa6d76?auto=format&fit=crop&w=1650&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    background-image: url(https://www.fluentin3months.com/wp-content/uploads/2015/05/couple-travel.jpg);
     animation-delay: 28s;
 }
   
