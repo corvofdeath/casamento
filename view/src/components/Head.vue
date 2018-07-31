@@ -41,6 +41,8 @@ export default {
     text-align: center;
     padding-top: 40vh;
     color: white;
+    // font-family: 'Pacifico', cursive;
+    font-family: 'Amatic SC', cursive;
 }
 
 @media (max-width: 640px) {
@@ -51,24 +53,24 @@ export default {
 
 h1 {
     font-size: 5em;
-    text-shadow: 0 1px 0 #ccc,
-                 0 2px 0 #c9c9c9,
-                 0 3px 0 #bbb,
-                 0 4px 0 #b9b9b9,
-                 0 5px 0 #aaa,
-                 0 6px 1px rgba(0,0,0,.1),
-                 0 0 5px rgba(0,0,0,.1),
-                 0 1px 3px rgba(0,0,0,.3),
-                 0 3px 5px rgba(0,0,0,.2),
-                 0 5px 10px rgba(0,0,0,.25),
-                 0 10px 10px rgba(0,0,0,.2),
-                 0 20px 20px rgba(0,0,0,.15);
+    // text-shadow: 0 1px 0 #ccc,
+    //              0 2px 0 #c9c9c9,
+    //              0 3px 0 #bbb,
+    //              0 4px 0 #b9b9b9,
+    //              0 5px 0 #aaa,
+    //              0 6px 1px rgba(0,0,0,.1),
+    //              0 0 5px rgba(0,0,0,.1),
+    //              0 1px 3px rgba(0,0,0,.3),
+    //              0 3px 5px rgba(0,0,0,.2),
+    //              0 5px 10px rgba(0,0,0,.25),
+    //              0 10px 10px rgba(0,0,0,.2),
+    //              0 20px 20px rgba(0,0,0,.15);
 }
   
 h3 {
-    text-shadow: 0px 4px 3px rgba(0,0,0,.4),
-                 0px 8px 13px rgba(0,0,0,.1),
-                 0px 18px 23px rgba(0,0,0,.1);
+    // text-shadow: 0px 4px 3px rgba(0,0,0,.4),
+    //              0px 8px 13px rgba(0,0,0,.1),
+    //              0px 18px 23px rgba(0,0,0,.1);
 }
   
 hr {
