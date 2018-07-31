@@ -6,8 +6,7 @@
                     <h1>Casamento</h1>
                     <h3>Filipe & Liliane</h3>
                     <hr>
-                    <round-button href="#other" img="heart"></round-button>
-                    <!--<b-button href="#other" variant="outline-light" v-smooth-scroll="{ duration: 1500, offset: 0 }">Ver Lista</b-button>-->
+                    <round-button href="#history" img="heart"></round-button>
                 </div>
                 <ul class="slideshow">
                     <li></li>
@@ -41,7 +40,6 @@ export default {
     text-align: center;
     padding-top: 40vh;
     color: white;
-    // font-family: 'Pacifico', cursive;
     font-family: 'Amatic SC', cursive;
 }
 

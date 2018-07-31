@@ -1,0 +1,34 @@
+<template>
+    <b-container id="history">
+        <b-row class="title">
+            <b-col class="center">
+                <h1>Nossa História</h1>
+            </b-col>
+        </b-row>
+        <div class="padding20"></div>
+        <b-row class="content">
+            <b-col class="center">
+                <p>Content</p>
+            </b-col>
+        </b-row>
+    </b-container>
+</template>
+
+<script>
+export default {
+    name: "app-history"
+}
+</script>
+
+<style lang="scss" scoped>
+.title {
+    padding-top: 10vh;
+    font-family: 'Amatic SC', cursive
+}
+
+.content {
+    font-family: 'Pacifico', cursive;
+}
+</style>
+
+

@@ -3,7 +3,9 @@
         <section v-bind:style="{ opacity: fadeOut }">
             <Head></Head>
         </section>
-        <section id="other"></section>
+        <section id="history">
+            <History></History>
+        </section>
     </div>
 </template>
 
@@ -11,12 +13,14 @@
 
 // @ is an alias to /src
 import Head from '@/components/Head.vue'
+import History from '@/components/History.vue'
 
 export default {
     name: 'app-home',
     
     components: {
-        Head
+        Head,
+        History
     },
 
     data: function () {
@@ -44,10 +48,6 @@ export default {
 <style lang="scss">
 section {
     height: 100vh;
-}
-
-section:nth-child(2) {
-    background: lightgreen;
 }
 </style>
 
