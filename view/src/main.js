@@ -4,7 +4,6 @@ import router from './router';
 
 import BootstrapVue from 'bootstrap-vue';
 import vueSmoothScroll from 'vue-smooth-scroll';
-import VueTreeNavigation from 'vue-tree-navigation';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -19,7 +18,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.use(BootstrapVue);
 Vue.use(vueSmoothScroll);
-Vue.use(VueTreeNavigation);
 
 Vue.config.productionTip = false
 
