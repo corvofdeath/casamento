@@ -6,7 +6,7 @@
                     <h1>Dream Tuscany</h1>
                     <h3>The Only Tuscany Travel Guide</h3>
                     <hr>
-                    <b-button href="#other" variant="light" v-smooth-scroll="{ duration: 1000, offset: 0 }">Let’s Go</b-button>
+                    <b-button href="#other" variant="light" v-smooth-scroll="{ duration: 5000, offset: 0 }">Let’s Go</b-button>
                 </div>
                 <ul class="slideshow">
                     <li></li>
