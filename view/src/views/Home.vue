@@ -25,7 +25,11 @@ export default {
 
     data: function () {
         return {
-            fadeOut: 1
+            fadeOut: 1,
+            items: [
+                { name: 'Historia', element: 'history' },
+                { name: 'TEste', element: 'teste' },
+            ]
         }
     },
 
