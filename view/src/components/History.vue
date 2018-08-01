@@ -1,5 +1,5 @@
 <template>
-    <b-container id="history">
+    <div id="history">
         <b-row class="title">
             <b-col class="center">
                 <h1>Nossa História</h1>
@@ -11,7 +11,7 @@
                 <p>Content</p>
             </b-col>
         </b-row>
-    </b-container>
+    </div>
 </template>
 
 <script>
@@ -22,7 +22,6 @@ export default {
 
 <style lang="scss" scoped>
 .title {
-    padding-top: 10vh;
     font-family: 'Amatic SC', cursive
 }
 
