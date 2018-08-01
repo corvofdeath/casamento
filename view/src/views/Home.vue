@@ -101,5 +101,12 @@ section {
 .selected {
     color: #42b883 !important;
 }
+
+@media (max-width: 640px) {
+    .side-nav li {
+        display: inline;
+        margin-left: 5px;
+    }
+}
 </style>
 
