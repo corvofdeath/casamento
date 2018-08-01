@@ -7,7 +7,7 @@
             <b-container fluid class="tabs">
                 <b-row>
                     <b-col></b-col>
-                    <b-col cols="12" md="8">
+                    <b-col cols="12" md="8" sm="8">
                         <History v-if="location === items[0]"></History>
                         <List v-if="location === items[1]"></List>
                     </b-col>
@@ -102,7 +102,7 @@ section {
     color: #42b883 !important;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 575px) {
     .side-nav li {
         display: inline;
         margin-left: 5px;
