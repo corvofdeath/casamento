@@ -1,5 +1,7 @@
 import Koa from 'koa';
-import bodyParser from 'koa-body';
+import bodyParser from 'koa-body'; 
+import koaStatic from 'koa-static';
+import path from 'path';
 
 import config from '../config/config';
 import database from '../config/datasource';
@@ -18,6 +20,7 @@ class Server {
         this.app.use(bodyParser());
         this.app.use(auth());
         this.app.use(api.routes());
+        this.app.use(koaStatic(path.join(__dirname, '../dist')));
     }
 
     async start(port) {
