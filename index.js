@@ -8,9 +8,9 @@ async function init() {
 
     try {
         console.log("Starting server...")
-        const port = process.env.PORT;
+        const port = process.env.PORT || "3000";
 
-        await server.start(port || "3000");
+        await server.start(port);
 
         console.log(`Server started successfully on port ${port}`);       
     } catch (error) {
