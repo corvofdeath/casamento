@@ -1,6 +1,7 @@
 import Koa from 'koa';
 import bodyParser from 'koa-body'; 
 import koaStatic from 'koa-static';
+import koaSend from 'koa-send';
 import path from 'path';
 
 import config from '../config/config';
@@ -21,6 +22,11 @@ class Server {
         this.app.use(auth());
         this.app.use(api.routes());
         this.app.use(koaStatic(path.join(__dirname, '../dist')));
+
+        // this last middleware catches any request that isn't handled by koa-static or koa-router
+        this.app.use(async (ctx) => {
+            await koaSend(ctx, '/dist/index.html');
+        });
     }
 
     async start(port) {
