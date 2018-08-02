@@ -6,8 +6,10 @@ export default {
 
         try {
 
-            console.log("[DATASOURCE]: Try to connect with: ", config.database);
-            await mongoose.connect(config.database, { useNewUrlParser: true }); 
+            let database = process.env.NODE_ENV === "dev" ? config.database.dev : config.database.prod;
+
+            console.log("[DATASOURCE]: Try to connect with: ", database);
+            await mongoose.connect(database, { useNewUrlParser: true }); 
             console.log("[DATASOURCE]: Connection succefull");
 
             return mongoose;
