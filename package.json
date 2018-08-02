@@ -25,6 +25,9 @@
     "koa": "^2.5.1",
     "koa-body": "^4.0.4",
     "koa-compose": "^4.1.0",
+    "koa-helmet": "^4.0.0",
+    "koa-logger-winston": "0.0.2",
+    "koa-morgan": "^1.0.1",
     "koa-passport": "^4.1.0",
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
@@ -34,6 +37,8 @@
     "passport-http": "^0.3.0",
     "passport-http-bearer": "^1.0.1",
     "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "winston": "2.4.0",
+    "winston-daily-rotate-file": "1.7.2"
   }
 }

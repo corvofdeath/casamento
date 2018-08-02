@@ -1,0 +1,24 @@
+2018-08-02T14:16:49.936Z - info: combine
+
+2018-08-02T14:16:49.996Z - info: combine
+
+2018-08-02T14:16:49.997Z - info: combine
+
+2018-08-02T14:16:49.998Z - info: combine
+
+2018-08-02T14:16:50.036Z - info: combine
+
+2018-08-02T14:16:50.230Z - info: combine
+
+2018-08-02T14:17:10.048Z - info: ::1 - - [02/Aug/2018:14:17:10 +0000] "GET / HTTP/1.1" 200 846 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+
+2018-08-02T14:17:10.070Z - info: ::1 - - [02/Aug/2018:14:17:10 +0000] "GET /css/app.2e6eb947.css HTTP/1.1" 200 4021 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+
+2018-08-02T14:17:10.071Z - info: ::1 - - [02/Aug/2018:14:17:10 +0000] "GET /js/app.2be0f1e0.js HTTP/1.1" 200 7206 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+
+2018-08-02T14:17:10.072Z - info: ::1 - - [02/Aug/2018:14:17:10 +0000] "GET /css/chunk-vendors.5e255913.css HTTP/1.1" 200 146091 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+
+2018-08-02T14:17:10.088Z - info: ::1 - - [02/Aug/2018:14:17:10 +0000] "GET /js/chunk-vendors.ba60a549.js HTTP/1.1" 200 826155 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+
+2018-08-02T14:17:10.300Z - info: ::1 - - [02/Aug/2018:14:17:10 +0000] "GET /favicon.ico HTTP/1.1" 200 1150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+
