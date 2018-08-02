@@ -2,13 +2,13 @@
 
 import server from './server/server';
 
-console.log("Koa-Exemple service is running");
+console.log("Casamento API service is running");
 
 async function init() {
 
     try {
         console.log("Starting server...")
-        const port = "3000";
+        const port = process.env.PORT;
 
         await server.start(port || "3000");
 
