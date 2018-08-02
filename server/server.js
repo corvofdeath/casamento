@@ -54,10 +54,11 @@ class Server {
         this.logger = initLogger();
 
         // log routes
-        // routes.stack.forEach(route => console.log(route.path));
+        api.stack.forEach(route => console.log(route.path));
 
         // midlewares
         this.app.use(helmet());
+        this.app.use(koaWinston(this.logger));
         this.app.use(morgan('combined', { stream: this.logger.stream }));
         this.app.use(bodyParser());
         this.app.use(auth());
