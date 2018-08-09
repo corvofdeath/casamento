@@ -1,7 +1,12 @@
 import mongoose from 'mongoose';
 
-let clientSchema = new mongoose.Schema({
+import { family } from '../utils/types';
 
+let clientSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    address: { type: String },
+    city: { type: String },
+    family: { type: String, required: true }
 });
 
 export default mongoose.model('clients', clientSchema);

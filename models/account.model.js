@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { genSalt, hash as _hash, compare } from 'bcrypt-nodejs';
 
-import roles from '../utils/roles';
+import { roles } from '../utils/types';
 
 let accountSchema = new mongoose.Schema({
     email: {
@@ -14,10 +14,6 @@ let accountSchema = new mongoose.Schema({
         required: true,
         select: false
     },
-    name: {
-        type: String,
-        required: true
-    }, 
     role: {
         type: String,
         required: true,
