@@ -1,5 +1,5 @@
 import { Strategy as CustomStrategy } from 'passport-custom';
-import User from '../../models/user.model';
+import Account from '../../models/account.model';
 
 export default new CustomStrategy(async (ctx, done) => {
     console.log('Email Strategy: ', ctx.body);
@@ -9,17 +9,17 @@ export default new CustomStrategy(async (ctx, done) => {
 
         // Test whether is a login using email and password
         if (body.email && body.password) {
-            const user = await User.findOne({ email: ctx.body.email.toLowerCase() }).select("+password");
+            const account = await Account.findOne({ email: ctx.body.email.toLowerCase() }).select("+password");
 
-            if (!user) 
+            if (!account) 
                 done(null, false);
 
-            const result = await user.verifyPassword(body.password, user.password);
+            const result = await Account.verifyPassword(body.password, account.password);
 
             if (!result)
                 done(null, false);
 
-            done(null, user);
+            done(null, account);
 
         } else {
             done(null, false);

@@ -1,7 +1,7 @@
 import passport from 'koa-passport';
 import compose from 'koa-compose';
 import jwt from 'jsonwebtoken';
-import User from '../models/user.model';
+import Account from '../models/account.model';
 import config from '../config/config';
 
 // Strategies
@@ -11,15 +11,15 @@ import emailStrategy from './strategies/email';
 passport.use('jwt', jwtStrategy);
 passport.use('email', emailStrategy);
 
-passport.serializeUser((user, done) => {
-    done(null, user._id);
+passport.serializeaccount((account, done) => {
+    done(null, account._id);
 });
 
-passport.deserializeUser((id, done) => {
+passport.deserializeaccount((id, done) => {
     (async () => {
         try {
-            const user = await User.findById(id);
-            done(null, user);
+            const account = await Account.findById(id);
+            done(null, account);
         } catch (error) {
             done(error);
         }
@@ -44,20 +44,21 @@ export function authEmail() {
 export function generateToken() {
     return async ctx => {
 
-        const { user } = ctx.state;
+        const { account } = ctx.state;
         
-        if (user === false) {
+        if (account === false) {
             ctx.status = 401;
         } else {
-            const jwtToken = jwt.sign({ id: user }, config.jwt.secret);
+            const jwtToken = jwt.sign({ id: account }, config.jwt.secret);
             const token = `Bearer ${jwtToken}`;
 
-            const currentUser = await User.findOne({ _id: user });
+            // TODO: Get client or user object
+            const currentaccount = await Account.findOne({ _id: account });
 
             ctx.status = 200;
             ctx.body = {
                 token,
-                user: currentUser,
+                account: currentaccount,
             };
         }
     };
