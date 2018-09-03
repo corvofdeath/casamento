@@ -1,21 +1,24 @@
 import mongoose from 'mongoose';
+import Logger from '../utils/logger';
 
 export default {
 
     connect: async (config) => {
 
+        const logger = new Logger("DataSource")
+
         try {
 
             let database = process.env.NODE_ENV === "dev" ? config.database.dev : config.database.prod;
 
-            console.log("[DATASOURCE]: Try to connect with: ", database);
+            logger.info("Try to connect with: " + database);
             await mongoose.connect(database, { useNewUrlParser: true }); 
-            console.log("[DATASOURCE]: Connection succefull");
+            logger.info("Connection succefull");
 
             return mongoose;
 
         } catch (error) {
-            console.error("[DATASOURCE]: FATAL ERROR - ", error);
+            logger.error(error);
         }
     }
 }

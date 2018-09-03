@@ -3,21 +3,26 @@ import compose from 'koa-compose';
 import jwt from 'jsonwebtoken';
 import Account from '../models/account.model';
 import config from '../config/config';
+import Logger from '../utils/logger';
 
 // Strategies
 import jwtStrategy from './strategies/jwt';
 import emailStrategy from './strategies/email';
 
+const logger = new Logger("Auth");
+
 passport.use('jwt', jwtStrategy);
 passport.use('email', emailStrategy);
 
-passport.serializeaccount((account, done) => {
+passport.serializeUser((account, done) => {
+    logger.info(`Serializing account: ${ account._id }`);
     done(null, account._id);
 });
 
-passport.deserializeaccount((id, done) => {
+passport.deserializeUser((id, done) => {
     (async () => {
         try {
+            logger.info(`Deserializing account: ${ account._id }`);
             const account = await Account.findById(id);
             done(null, account);
         } catch (error) {
@@ -51,6 +56,8 @@ export function generateToken() {
         } else {
             const jwtToken = jwt.sign({ id: account }, config.jwt.secret);
             const token = `Bearer ${jwtToken}`;
+
+            logger.info(`Create token for: ${ account }`);
 
             // TODO: Get client or user object
             const currentaccount = await Account.findOne({ _id: account });

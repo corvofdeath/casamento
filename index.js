@@ -1,20 +1,22 @@
 'use strict'
-
+import Logger from './utils/logger';
 import server from './server/server';
 
-console.log("Casamento API service is running");
+const logger = new Logger("Index");
+
+logger.info("Casamento API service is running");
 
 async function init() {
 
     try {
-        console.log("Starting server...")
+        logger.info("Starting server...")
         const port = process.env.PORT || "3000";
 
         await server.start(port);
 
-        console.log(`Server started successfully on port ${port}`);       
+        logger.info(`Server started successfully on port ${port}`);       
     } catch (error) {
-        console.log(error);
+        logger.error(error);
     }
 }
 
