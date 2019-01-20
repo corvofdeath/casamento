@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import RoundButton from "@/components/RoundButton.vue";
+import RoundButton from "./RoundButton.vue";
 
 export default {
     name: "app-head",

@@ -26,9 +26,9 @@
 <script>
 
 // @ is an alias to /src
-import Head from '@/components/Head.vue'
-import History from '@/components/History.vue'
-import List from '@/components/List.vue'
+import Head from '../components/Head.vue'
+import History from '../components/History.vue'
+import List from '../components/List.vue'
 
 export default {
     name: 'app-home',
@@ -51,7 +51,7 @@ export default {
     },
 
     methods: {
-        handleScroll: function (event) {
+        handleScroll: function () {
             this.fadeOut = 1 - window.scrollY / 250;
         },
 

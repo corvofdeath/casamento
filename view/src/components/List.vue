@@ -8,15 +8,24 @@
         <div class="padding20"></div>
         <b-row class="content">
             <b-col class="center">
-                <p>Content</p>
+                <b-card-group deck>
+                    <ListItem></ListItem>
+                    <ListItem></ListItem>
+                    <ListItem></ListItem>
+                </b-card-group>
             </b-col>
         </b-row>
     </div>
 </template>
 
 <script>
+import ListItem from './ListItem.vue';
+
 export default {
-    name: "app-list"
+    name: "app-list",
+    components: {
+        ListItem
+    }
 }
 </script>
 
@@ -27,6 +36,10 @@ export default {
 
 .content {
     font-family: 'Pacifico', cursive;
+}
+
+.card-deck {
+    margin-left: 15px;
 }
 </style>
 
