@@ -2,6 +2,7 @@ import Koa from 'koa';
 import bodyParser from 'koa-body'; 
 import koaStatic from 'koa-static';
 import koaSend from 'koa-send';
+import cors from '@koa/cors';
 import path from 'path';
 
 import config from '../config/config';
@@ -15,9 +16,10 @@ class Server {
         this.app = new Koa();
 
         // log routes
-        // routes.stack.forEach(route => console.log(route.path));
+        api.stack.forEach(route => console.log(route.path));
 
         // midlewares
+        this.app.use(cors());
         this.app.use(bodyParser());
         this.app.use(auth());
         this.app.use(api.routes());

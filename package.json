@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/corvofdeath/koa-exemple#readme",
   "dependencies": {
+    "@koa/cors": "^2.2.3",
     "bcrypt-nodejs": "0.0.3",
     "esm": "^3.0.61",
     "jsonwebtoken": "^8.3.0",

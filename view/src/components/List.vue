@@ -9,9 +9,7 @@
         <b-row class="content">
             <b-col class="center">
                 <b-card-group deck>
-                    <ListItem></ListItem>
-                    <ListItem></ListItem>
-                    <ListItem></ListItem>
+                    <ListItem v-for="item in items" :key="item._id" :id="item._id" :title="item.title" :text="item.text" :img="item.img" :gifted="item.gifted"></ListItem>
                 </b-card-group>
             </b-col>
         </b-row>
@@ -20,11 +18,25 @@
 
 <script>
 import ListItem from './ListItem.vue';
+import axios from 'axios';
 
 export default {
     name: "app-list",
     components: {
         ListItem
+    },
+    data: function () {
+        return {
+            items: []
+        }
+    },
+    mounted: async function () {
+        try {
+            const result = await axios.get('http://localhost:3000/api/v1/item');
+            this.items = result.data;
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
 </script>

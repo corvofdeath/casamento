@@ -2,36 +2,54 @@
   <div id="list-item">
     <div>
       <b-card
-        title="Liquidificador"
+        :title="title"
         :border-variant="border"
-        img-src="https://www.extra-imagens.com.br/Eletroportateis/LiquidificadoreseAcessorios/Liquidificadores/5082526/149304780/liquidificador-philco-ph900-com-12-velocidades-e-1200w-vermelho-5082526.jpg"
+        :img-src="img"
         img-alt="Image"
         img-top
         tag="article"
         style="max-width: 15rem;"
         class="mb-2"
       >
-        <p class="card-text">Observações</p>
-        <b-button :disabled='gifted' variant="outline-secondary" @click="gift">{{ gifted ? 'Recebido' : 'Presentear' }}</b-button>
+        <p class="card-text">{{ text }}</p>
+        <b-button variant="outline-secondary" @click="gift">{{ internalGifted ? 'Recebido' : 'Presentear' }}</b-button>
       </b-card>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: "app-list-item",
-    
+    props: {
+      title: String,
+      text: String,
+      img: String,
+      gifted: Boolean,
+      id: String,
+    },
     data: function () {
         return {
-            gifted: false,
-            border: 'none'
+           internalGifted: this.gifted
         }
     },
+    computed: {
+      border: function () {
+        return this.internalGifted ? 'success' : 'none';;
+      }
+    },
     methods: {
-        gift: function () {
-            this.gifted = true;
-            this.border = 'success';
+        gift: async function () {
+
+            try {
+              const result = await axios.put('http://localhost:3000/api/v1/item/gift/' + this.id);
+              
+              this.internalGifted = result.data;
+            } catch (error) {
+              console.log(error);
+            } 
         }
     }
 };
